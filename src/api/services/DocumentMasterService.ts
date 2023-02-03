@@ -3,7 +3,7 @@ import { Service } from 'typedi';
 export class DocumentMasterService {
     constructor() { }
 
-    public async findAll(): Promise<any> {
+    public async saveUser(): Promise<any> {
         return "test"
     }
 }

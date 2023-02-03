@@ -68,17 +68,6 @@ export const env = {
     },
     monitor: {
         enabled: toBool(getOsEnv('MONITOR_ENABLED')),
-        route: getOsEnv('MONITOR_ROUTE'),
-        username: getOsEnv('MONITOR_USERNAME'),
-        password: getOsEnv('MONITOR_PASSWORD'),
-    },
-    socket: {
-        port: getOsEnv('SOCKET_PORT'),
-        secretKey: getOsEnv('SOCKET_SECRET_KEY'),
-    },
-    security: {
-        allowedClients: getOsEnv('ALLOWED_CLIENTS'),
-        webClientSecret: getOsEnv('WEB_APP_SECRET'),
-        apiClientSecret: getOsEnv('PHELIX_API_SECRET'),
-    },
+        route: getOsEnv('MONITOR_ROUTE')
+    }
 };

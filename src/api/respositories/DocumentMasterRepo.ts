@@ -1,6 +1,6 @@
 import { EntityRepository, Repository } from 'typeorm';
-import { DocumentMasterEntity } from '../entities/DocumentMasterEntity';
+import { UserEntity } from '../entities/UserEntity';
 
-@EntityRepository(DocumentMasterEntity)
-export class DocumentMasterRepo  extends Repository<DocumentMasterEntity> {
+@EntityRepository(UserEntity)
+export class DocumentMasterRepo  extends Repository<UserEntity> {
 }
