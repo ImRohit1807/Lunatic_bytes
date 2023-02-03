@@ -3,7 +3,7 @@ import * as path from 'path';
 
 import * as pkg from '../package.json';
 import {
-    getOsEnv, getOsEnvOptional, getOsPath, getOsPaths, normalizePort, toBool, toNumber
+    getOsEnv, getOsEnvOptional, getOsPaths, normalizePort, toBool, toNumber
 } from './lib/env';
 
 /**
@@ -29,15 +29,9 @@ export const env = {
         port: normalizePort(process.env.PORT || getOsEnv('APP_PORT')),
         banner: toBool(getOsEnv('APP_BANNER')),
         dirs: {
-            migrations: getOsPaths('TYPEORM_MIGRATIONS'),
-            migrationsDir: getOsPath('TYPEORM_MIGRATIONS_DIR'),
             entities: getOsPaths('TYPEORM_ENTITIES'),
-            entitiesDir: getOsPath('TYPEORM_ENTITIES_DIR'),
             controllers: getOsPaths('CONTROLLERS'),
             middlewares: getOsPaths('MIDDLEWARES'),
-            interceptors: getOsPaths('INTERCEPTORS'),
-            subscribers: getOsPaths('SUBSCRIBERS'),
-            resolvers: getOsPaths('RESOLVERS'),
         },
     },
     log: {
@@ -54,13 +48,6 @@ export const env = {
         database: getOsEnv('TYPEORM_DATABASE'),
         synchronize: toBool(getOsEnvOptional('TYPEORM_SYNCHRONIZE')),
         logging: getOsEnv('TYPEORM_LOGGING'),
-        /*
-        entities: [
-            DocumentTypeSuggestionEntity,
-            TemplateTypeSuggestionEntity
-          ],
-          autoSchemaSync: true,
-          */
     },
     swagger: {
         enabled: toBool(getOsEnv('SWAGGER_ENABLED')),
@@ -68,6 +55,6 @@ export const env = {
     },
     monitor: {
         enabled: toBool(getOsEnv('MONITOR_ENABLED')),
-        route: getOsEnv('MONITOR_ROUTE')
-    }
+        route: getOsEnv('MONITOR_ROUTE'),
+    },
 };
