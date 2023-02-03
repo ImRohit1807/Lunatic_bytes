@@ -6,7 +6,7 @@ import { banner } from './lib/banner';
 import { Logger } from './lib/logger';
 import { expressLoader } from './loaders/expressLoader';
 import { iocLoader } from './loaders/iocLoader';
-import { monitorLoader } from './loaders/monitorLoader';
+// import { monitorLoader } from './loaders/monitorLoader';
 import { swaggerLoader } from './loaders/swaggerLoader';
 import { typeormLoader } from './loaders/typeormLoader';
 import { winstonLoader } from './loaders/winstonLoader';
@@ -29,7 +29,7 @@ bootstrapMicroframework({
         typeormLoader,
         expressLoader,
         swaggerLoader,
-        monitorLoader,
+      //  monitorLoader,
     ],
 })
     .then(() => banner(log))

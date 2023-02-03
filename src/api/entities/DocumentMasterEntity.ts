@@ -1,5 +1,4 @@
-import { Column, Entity, PrimaryGeneratedColumn, CreateDateColumn, UpdateDateColumn, OneToMany, Index } from 'typeorm';
-import { DocumentImageEntity } from './DocumentImageEntity';
+import { Column, Entity, PrimaryGeneratedColumn, CreateDateColumn, UpdateDateColumn, Index } from 'typeorm';
 
 @Entity('DOCUMENT_MASTER')
 
@@ -36,7 +35,4 @@ export class DocumentMasterEntity {
 
     @UpdateDateColumn({ name: 'update_at', nullable: true })
     public update_at: Date;
-
-    @OneToMany(() => DocumentImageEntity, image => image.doc)
-    public images: DocumentImageEntity[];
 }
